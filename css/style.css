@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #contain {
     display: grid;
     grid-template-columns: repeat(19, 40px); /* pour répéter 19 fois une colonne de 40px */
@@ -14,4 +19,14 @@
 
 .bonbon {
     background-image: url("/img/bonbon.gif");
+}
+
+.pacman {
+    background-image: url("/img/pacman4.gif");
+}
+
+#score {
+    width: 100px;
+    height: 40px;
+    background-color: chartreuse;
 }
