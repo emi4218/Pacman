@@ -1,0 +1,17 @@
+#contain {
+    display: grid;
+    grid-template-columns: repeat(19, 40px); /* pour répéter 19 fois une colonne de 40px */
+    grid-template-rows: repeat(22, 40px); /* pour répéter 22 fois une ligne de 40px */
+}
+
+.mur {
+    background-image: url("/img/mur.gif");
+}
+
+.sol {
+    background-image: url("/img/sol.gif");
+}
+
+.bonbon {
+    background-image: url("/img/bonbon.gif");
+}
