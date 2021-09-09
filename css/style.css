@@ -30,3 +30,19 @@ body {
     height: 40px;
     background-color: chartreuse;
 }
+
+.fantome0 {
+    background-image: url("/img/fantome0.gif");
+}
+
+.fantome1 {
+    background-image: url("/img/fantome1.gif");
+}
+
+.fantome2 {
+    background-image: url("/img/fantome2.gif");
+}
+
+.fantome3 {
+    background-image: url("/img/fantome3.gif");
+}
