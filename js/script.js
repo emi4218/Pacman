@@ -81,6 +81,7 @@ function tourDeJeu() {
         deplacerPacman();
         deplacerFantomes();
         gererCollision();
+        collisionFantomes();
     }
     manger();
     gagner();
@@ -135,39 +136,8 @@ function gererCollision() {
             pacman.y++;
         }
     }
-
     for (f = 0; f < tabFantomes.length; f++) {
         if (tabFantomes[f].y == pacman.y && tabFantomes[f].x == pacman.x) { // test de collision au déplacement de pacman
-            alert("Perdu !")
-            clearInterval(interval)
-        }
-        if (grille[tabFantomes[f].y - 1][tabFantomes[f].x - 1] == 0) {
-            if (tabFantomes[f].direction == 0) {
-                tabFantomes[f].x--;
-            }
-            if (tabFantomes[f].direction == 1) {
-                tabFantomes[f].y--;
-            }
-            if (tabFantomes[f].direction == 2) {
-                tabFantomes[f].x++;
-            }
-            if (tabFantomes[f].direction == 3) {
-                tabFantomes[f].y++;
-            }
-            if (tabFantomes[f].x < 0) {
-                tabFantomes[f].x = 19
-            }
-            if (tabFantomes[f].x > 19) {
-                tabFantomes[f].x = 0
-            }
-            if (tabFantomes[f].y < 0) {
-                tabFantomes[f].y = 22
-            }
-            if (tabFantomes[f].y > 22) {
-                tabFantomes[f].y = 0
-            }
-        }
-        if (tabFantomes[f].y == pacman.y && tabFantomes[f].x == pacman.x) { // test de collision au déplacement des fantômes
             alert("Perdu !")
             clearInterval(interval)
         }
@@ -260,4 +230,37 @@ function deplacerFantomes() {
     }
 }
 
-
+function collisionFantomes() {
+    for (f = 0; f < tabFantomes.length; f++) {
+        if (grille[tabFantomes[f].y - 1][tabFantomes[f].x - 1] == 0) {
+            if (tabFantomes[f].direction == 0) {
+                tabFantomes[f].x--;
+            }
+            if (tabFantomes[f].direction == 1) {
+                tabFantomes[f].y--;
+            }
+            if (tabFantomes[f].direction == 2) {
+                tabFantomes[f].x++;
+            }
+            if (tabFantomes[f].direction == 3) {
+                tabFantomes[f].y++;
+            }
+            if (tabFantomes[f].x < 0) {
+                tabFantomes[f].x = 19
+            }
+            if (tabFantomes[f].x > 19) {
+                tabFantomes[f].x = 0
+            }
+            if (tabFantomes[f].y < 0) {
+                tabFantomes[f].y = 22
+            }
+            if (tabFantomes[f].y > 22) {
+                tabFantomes[f].y = 0
+            }
+        }
+        if (tabFantomes[f].y == pacman.y && tabFantomes[f].x == pacman.x) { // test de collision au déplacement des fantômes
+            alert("Perdu !")
+            clearInterval(interval)
+        }
+    }
+}
